@@ -1,4 +1,4 @@
-import fs from 'fs';
+import * as fs from 'fs';
 import { javascript } from 'projen';
 import { AwsCdkTypeScriptApp, AwsCdkTypeScriptAppOptions } from 'projen/lib/awscdk';
 import { ReleaseTrigger } from 'projen/lib/release';
