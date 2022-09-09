@@ -1,7 +1,7 @@
-import { AwsCdkTypeScriptApp, AwsCdkTypeScriptAppOptions } from "projen/lib/awscdk";
-import {javascript} from 'projen';
-import { ReleaseTrigger } from "projen/lib/release";
 import fs from 'fs';
+import { javascript } from 'projen';
+import { AwsCdkTypeScriptApp, AwsCdkTypeScriptAppOptions } from 'projen/lib/awscdk';
+import { ReleaseTrigger } from 'projen/lib/release';
 
 export class AwsCDKClosedApp extends AwsCdkTypeScriptApp {
     constructor(options: AwsCdkTypeScriptAppOptions) {
@@ -18,8 +18,8 @@ export class AwsCDKClosedApp extends AwsCdkTypeScriptApp {
         this.eslint?.addRules({
             '@typescript-eslint/indent': ['error', 4],
         });
-        
-        const loginTask = this.addTask('login', {exec: 'AWS_PROFILE=sso ./refreshCredentials.sh'});
+
+        const loginTask = this.addTask('login', { exec: 'AWS_PROFILE=sso ./refreshCredentials.sh' });
         this.cdkTasks.deploy.reset();
         this.cdkTasks.deploy.spawn(loginTask);
         this.cdkTasks.deploy.exec('cdk deploy --profile sso --require-approval never --outputs-file cdk-output.json');

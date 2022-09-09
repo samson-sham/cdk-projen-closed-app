@@ -1,8 +1,8 @@
 {
-  "name": "cdk-projen",
+  "name": "cdk-projen-closed-app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/user/projen.git"
+    "url": "https://github.com/samson-sham/cdk-projen-closed-app.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -19,6 +19,7 @@
     "package:js": "npx projen package:js",
     "post-compile": "npx projen post-compile",
     "pre-compile": "npx projen pre-compile",
+    "publish:git": "npx projen publish:git",
     "release": "npx projen release",
     "test": "npx projen test",
     "test:update": "npx projen test:update",
