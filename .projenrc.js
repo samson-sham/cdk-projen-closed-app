@@ -24,5 +24,5 @@ const project = new cdk.JsiiProject({
 project.eslint.addRules({
     '@typescript-eslint/indent': ['error', 4],
 });
-project.packageTask.exec('pnpm publish');
+project.packageTask.exec('pnpm publish --no-git-checks');
 project.synth();
