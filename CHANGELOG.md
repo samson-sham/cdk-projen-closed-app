@@ -1,4 +1,11 @@
 
+### [0.0.2](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.1...v0.0.2) (2022-09-12)
+
+
+### Bug Fixes
+
+* value overrides order ([d5a6acc](https://github.com/samson-sham/cdk-projen-closed-app/commit/d5a6acce6d7681274f4341e090d4cf40be52e96b))
+
 ### [0.0.1](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.0...v0.0.1) (2022-09-12)
 
 
