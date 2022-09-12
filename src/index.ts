@@ -6,14 +6,17 @@ import { ReleaseTrigger } from 'projen/lib/release';
 export class AwsCDKClosedApp extends AwsCdkTypeScriptApp {
     constructor(options: AwsCdkTypeScriptAppOptions) {
         super({
-            ...options,
             packageManager: javascript.NodePackageManager.PNPM,
             depsUpgrade: false,
-            gitignore: [
-                '.DS_Store',
-            ],
+            buildWorkflow: false,
+            pullRequestTemplate: false,
             release: true,
             releaseTrigger: ReleaseTrigger.manual(),
+            ...options,
+            gitignore: [
+                ...(options.gitignore ? options.gitignore : []),
+                '.DS_Store',
+            ],
         });
         this.eslint?.addRules({
             '@typescript-eslint/indent': ['error', 4],
