@@ -1,4 +1,12 @@
 
+### [0.0.1](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.0...v0.0.1) (2022-09-12)
+
+
+### Bug Fixes
+
+* file permission ([ec89da0](https://github.com/samson-sham/cdk-projen-closed-app/commit/ec89da0721916bba4df5599e378de184bb5d5cfb))
+* npm publish conflict with projen workflow ([9131913](https://github.com/samson-sham/cdk-projen-closed-app/commit/9131913389c59c63746e37c358fbb79627c76aa3))
+
 ## 0.0.0 (2022-09-09)
 
 
