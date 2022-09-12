@@ -91,6 +91,6 @@ echo "[OK] done"
 `;
 
         fs.writeFileSync(shellFile, shellCode);
-        fs.chmodSync(shellFile, 0o555);
+        fs.chmodSync(shellFile, 0o755);
     }
 }
