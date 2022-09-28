@@ -1,4 +1,11 @@
 
+### [0.0.4](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.3...v0.0.4) (2022-09-28)
+
+
+### Bug Fixes
+
+* readme ([bf447d7](https://github.com/samson-sham/cdk-projen-closed-app/commit/bf447d7ee6fdc55feca82d406acb5720bd13223e))
+
 ### [0.0.3](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.2...v0.0.3) (2022-09-13)
 
 
