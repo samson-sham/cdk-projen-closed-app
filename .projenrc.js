@@ -11,7 +11,9 @@ const project = new cdk.JsiiProject({
 
     // deps: [],                /* Runtime dependencies of this module. */
     // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-    // devDeps: [],             /* Build dependencies for this module. */
+    // devDeps: [
+    //     'projen@^0.x',
+    // ],             /* Build dependencies for this module. */
     // packageName: undefined,  /* The "name" in package.json. */
     packageManager: javascript.NodePackageManager.PNPM,
     buildWorkflow: false,
@@ -21,8 +23,17 @@ const project = new cdk.JsiiProject({
     ],
     releaseTrigger: ReleaseTrigger.manual(),
 });
+// project.addPeerDeps('projen');
 project.eslint.addRules({
     '@typescript-eslint/indent': ['error', 4],
 });
 project.packageTask.exec('pnpm publish --no-git-checks');
+
+new javascript.UpgradeDependencies(project, {
+    // include: ['projen'],
+    taskName: "upgrade-npms",
+    workflow: false, // or true
+    // workflowOptions: { ... }
+});
+
 project.synth();
