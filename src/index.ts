@@ -40,7 +40,7 @@ export class AwsCDKClosedApp extends AwsCdkTypeScriptApp {
         if (!options.awsProfile) this.preCompileTask.spawn(loginTask);
         this.packageTask.spawn(this.cdkTasks.deploy);
 
-        if (!options.awsProfile) return this;
+        if (options.awsProfile) return this;
         const shellFile = 'refreshCredentials.sh';
         const shellCode = `#!/usr/bin/env bash
 
