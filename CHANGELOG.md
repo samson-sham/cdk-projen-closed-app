@@ -1,3 +1,12 @@
+
+### [0.0.7](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.6...v0.0.7) (2022-10-08)
+
+
+### Bug Fixes
+
+* change log ([fc38a88](https://github.com/samson-sham/cdk-projen-closed-app/commit/fc38a88c1cdb3edbf3acce44a705decdb01c3230))
+* slight logic error ([a17dfe8](https://github.com/samson-sham/cdk-projen-closed-app/commit/a17dfe834a64c5947d6326324d0547cba8851198))
+
 ### [0.0.6](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.5...v0.0.6) (2022-10-08)
 
 
