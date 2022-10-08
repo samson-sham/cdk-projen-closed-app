@@ -11,11 +11,16 @@ const project = new cdk.JsiiProject({
 
     // deps: [],                /* Runtime dependencies of this module. */
     // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-    // devDeps: [],             /* Build dependencies for this module. */
+    devDeps: [
+        'projen',
+    ],             /* Build dependencies for this module. */
     // packageName: undefined,  /* The "name" in package.json. */
     packageManager: javascript.NodePackageManager.PNPM,
     buildWorkflow: false,
     depsUpgrade: false,
+    // peerDeps: [
+    //     'projen',
+    // ],
     releaseTrigger: ReleaseTrigger.manual(),
 });
 project.eslint.addRules({
