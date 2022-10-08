@@ -3,7 +3,7 @@ import { javascript } from 'projen';
 import { AwsCdkTypeScriptApp, AwsCdkTypeScriptAppOptions } from 'projen/lib/awscdk';
 import { ReleaseTrigger } from 'projen/lib/release';
 
-interface AwsCDKClosedAppProp extends AwsCdkTypeScriptAppOptions {
+export interface AwsCDKClosedAppProp extends AwsCdkTypeScriptAppOptions {
     awsProfile?: string;
 }
 
