@@ -32,6 +32,10 @@ export class AwsCDKClosedApp extends AwsCdkTypeScriptApp {
         this.preCompileTask.spawn(loginTask);
         this.packageTask.spawn(this.cdkTasks.deploy);
 
+        // Allow mismatch peer dependencies, which usually causes necessary errors that breaks build
+        const npmRC = new javascript.NpmConfig(this);
+        npmRC.addConfig('strict-peer-dependencies', 'false');
+
         const shellFile = 'refreshCredentials.sh';
         const shellCode = `#!/usr/bin/env bash
 
