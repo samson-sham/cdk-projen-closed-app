@@ -3,12 +3,12 @@ import { javascript } from 'projen';
 import { AwsCdkTypeScriptApp, AwsCdkTypeScriptAppOptions } from 'projen/lib/awscdk';
 import { ReleaseTrigger } from 'projen/lib/release';
 
-export interface IAwsCDKClosedAppProp extends AwsCdkTypeScriptAppOptions {
-    awsProfile?: string;
+export interface AwsCDKClosedAppProp extends AwsCdkTypeScriptAppOptions {
+    readonly awsProfile?: string;
 }
 
 export class AwsCDKClosedApp extends AwsCdkTypeScriptApp {
-    constructor(options: IAwsCDKClosedAppProp) {
+    constructor(options: AwsCDKClosedAppProp) {
         super({
             packageManager: javascript.NodePackageManager.PNPM,
             depsUpgrade: false,
