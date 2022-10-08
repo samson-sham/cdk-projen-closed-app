@@ -3,8 +3,12 @@ import { javascript } from 'projen';
 import { AwsCdkTypeScriptApp, AwsCdkTypeScriptAppOptions } from 'projen/lib/awscdk';
 import { ReleaseTrigger } from 'projen/lib/release';
 
+interface AwsCDKClosedAppProp extends AwsCdkTypeScriptAppOptions {
+    awsProfile?: string;
+}
+
 export class AwsCDKClosedApp extends AwsCdkTypeScriptApp {
-    constructor(options: AwsCdkTypeScriptAppOptions) {
+    constructor(options: AwsCDKClosedAppProp) {
         super({
             packageManager: javascript.NodePackageManager.PNPM,
             depsUpgrade: false,
@@ -22,20 +26,21 @@ export class AwsCDKClosedApp extends AwsCdkTypeScriptApp {
             '@typescript-eslint/indent': ['error', 4],
         });
 
-        const loginTask = this.addTask('login', { exec: 'AWS_PROFILE=sso ./refreshCredentials.sh' });
-        this.cdkTasks.deploy.reset();
-        this.cdkTasks.deploy.spawn(loginTask);
-        this.cdkTasks.deploy.exec('cdk deploy --profile sso --require-approval never --outputs-file cdk-output.json');
-        this.cdkTasks.destroy.reset();
-        this.cdkTasks.destroy.spawn(loginTask);
-        this.cdkTasks.destroy.exec('cdk destroy --profile sso --force && rm cdk-output.json');
-        this.preCompileTask.spawn(loginTask);
-        this.packageTask.spawn(this.cdkTasks.deploy);
-
         // Allow mismatch peer dependencies, which usually causes necessary errors that breaks build
         const npmRC = new javascript.NpmConfig(this);
         npmRC.addConfig('strict-peer-dependencies', 'false');
 
+        const loginTask = this.addTask('login', { exec: 'AWS_PROFILE=sso ./refreshCredentials.sh' });
+        this.cdkTasks.deploy.reset();
+        if (!options.awsProfile) this.cdkTasks.deploy.spawn(loginTask);
+        this.cdkTasks.deploy.exec(`cdk deploy --profile ${options.awsProfile ?? 'sso'} --require-approval never --outputs-file cdk-output.json`);
+        this.cdkTasks.destroy.reset();
+        if (!options.awsProfile) this.cdkTasks.destroy.spawn(loginTask);
+        this.cdkTasks.destroy.exec(`cdk destroy --profile ${options.awsProfile ?? 'sso'} --force && rm cdk-output.json`);
+        if (!options.awsProfile) this.preCompileTask.spawn(loginTask);
+        this.packageTask.spawn(this.cdkTasks.deploy);
+
+        if (!options.awsProfile) return this;
         const shellFile = 'refreshCredentials.sh';
         const shellCode = `#!/usr/bin/env bash
 
