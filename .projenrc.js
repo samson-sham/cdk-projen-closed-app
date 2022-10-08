@@ -16,9 +16,6 @@ const project = new cdk.JsiiProject({
     packageManager: javascript.NodePackageManager.PNPM,
     buildWorkflow: false,
     depsUpgrade: false,
-    peerDeps: [
-        'projen',
-    ],
     releaseTrigger: ReleaseTrigger.manual(),
 });
 project.eslint.addRules({
