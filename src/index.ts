@@ -20,6 +20,7 @@ export class AwsCDKClosedApp extends AwsCdkTypeScriptApp {
             gitignore: [
                 ...(options.gitignore ? options.gitignore : []),
                 '.DS_Store',
+                '__snapshots__',
             ],
         });
         this.eslint?.addRules({
