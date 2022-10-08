@@ -1,4 +1,38 @@
 
+### [0.0.6](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.5...v0.0.6) (2022-10-08)
+
+
+### Features
+
+* add upgrade-npms task to update dependencies ([4d4fc7c](https://github.com/samson-sham/cdk-projen-closed-app/commit/4d4fc7ccc93ac5091bd111b81dcb776aefbd8793))
+* custom aws profile ([c1db808](https://github.com/samson-sham/cdk-projen-closed-app/commit/c1db808aa0caffb412c5a08f263e44023b85f22b))
+* generated API doc ([0a50da6](https://github.com/samson-sham/cdk-projen-closed-app/commit/0a50da6cd6b22375097c9fede7f1667025166b19))
+
+
+### Bug Fixes
+
+* expose AwsCDKClosedAppProp ([5f91b54](https://github.com/samson-sham/cdk-projen-closed-app/commit/5f91b5454589f036e4f27461626a24d18e2677fc))
+* jsii convention ([8bcfb96](https://github.com/samson-sham/cdk-projen-closed-app/commit/8bcfb96ece5ae3573f80a9b0d02445b89afdda9e))
+* JSII requirements ([a4dbfa9](https://github.com/samson-sham/cdk-projen-closed-app/commit/a4dbfa9beebf408f68ed4f9e915d6d2215b97a1c))
+* reset version ([f04a7ca](https://github.com/samson-sham/cdk-projen-closed-app/commit/f04a7ca215f31c8f088ff08be38cdb38afe850b2))
+
+### [0.0.6](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.5...v0.0.6) (2022-10-08)
+
+
+### Features
+
+* add upgrade-npms task to update dependencies ([4d4fc7c](https://github.com/samson-sham/cdk-projen-closed-app/commit/4d4fc7ccc93ac5091bd111b81dcb776aefbd8793))
+* custom aws profile ([c1db808](https://github.com/samson-sham/cdk-projen-closed-app/commit/c1db808aa0caffb412c5a08f263e44023b85f22b))
+* generated API doc ([0a50da6](https://github.com/samson-sham/cdk-projen-closed-app/commit/0a50da6cd6b22375097c9fede7f1667025166b19))
+
+
+### Bug Fixes
+
+* expose AwsCDKClosedAppProp ([5f91b54](https://github.com/samson-sham/cdk-projen-closed-app/commit/5f91b5454589f036e4f27461626a24d18e2677fc))
+* jsii convention ([8bcfb96](https://github.com/samson-sham/cdk-projen-closed-app/commit/8bcfb96ece5ae3573f80a9b0d02445b89afdda9e))
+* JSII requirements ([a4dbfa9](https://github.com/samson-sham/cdk-projen-closed-app/commit/a4dbfa9beebf408f68ed4f9e915d6d2215b97a1c))
+* reset version ([f04a7ca](https://github.com/samson-sham/cdk-projen-closed-app/commit/f04a7ca215f31c8f088ff08be38cdb38afe850b2))
+
 ### [0.0.5](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.4...v0.0.5) (2022-10-08)
 
 
