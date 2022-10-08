@@ -1,4 +1,11 @@
 
+### [0.0.8](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.7...v0.0.8) (2022-10-08)
+
+
+### Bug Fixes
+
+* add snapshots to gitignore ([7b3e68b](https://github.com/samson-sham/cdk-projen-closed-app/commit/7b3e68b50b06f952696cd348d352a7753859fac4))
+
 ### [0.0.7](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.6...v0.0.7) (2022-10-08)
 
 
