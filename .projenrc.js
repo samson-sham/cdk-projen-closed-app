@@ -31,7 +31,7 @@ project.packageTask.exec('pnpm publish --no-git-checks');
 
 new javascript.UpgradeDependencies(project, {
     // include: ['projen'],
-    taskName: "upgrade-npms",
+    taskName: 'upgrade-npms',
     workflow: false, // or true
     // workflowOptions: { ... }
 });
