@@ -1,4 +1,13 @@
 
+### [0.0.5](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.4...v0.0.5) (2022-10-08)
+
+
+### Bug Fixes
+
+* moved projen from peerDeps to devDeps ([081a58a](https://github.com/samson-sham/cdk-projen-closed-app/commit/081a58aca0034a4ad4aab8991ab1d49724f9390e))
+* remove projen devDeps ([58037cd](https://github.com/samson-sham/cdk-projen-closed-app/commit/58037cd2f98e032d3284a0eb182f1f5751c804c3))
+* strict-peer-dependencies which breaks projen ([0654add](https://github.com/samson-sham/cdk-projen-closed-app/commit/0654add33cd0e50554b2b4e1ffed14a699efdd1c))
+
 ### [0.0.4](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.3...v0.0.4) (2022-09-28)
 
 
