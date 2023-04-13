@@ -1,4 +1,14 @@
 
+### [0.0.9](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.8...v0.0.9) (2023-04-13)
+
+
+### Bug Fixes
+
+* API doc ([5b09dc7](https://github.com/samson-sham/cdk-projen-closed-app/commit/5b09dc70f0bec1fe19ef25e06179e56c2dac83a7))
+* ignore ts-jest annoying peer dependency requirement ([253ac43](https://github.com/samson-sham/cdk-projen-closed-app/commit/253ac438062e58a43efdf24ccb952b436ca14957))
+* projen peer dependency ([5659d85](https://github.com/samson-sham/cdk-projen-closed-app/commit/5659d85ed6189729bf2661872b50c2a3fb96a9aa))
+* update dependencies ([d2a5e8f](https://github.com/samson-sham/cdk-projen-closed-app/commit/d2a5e8f9fd2a6b1937c92f3c48c12cee5a17bad6))
+
 ### [0.0.8](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.7...v0.0.8) (2022-10-08)
 
 
