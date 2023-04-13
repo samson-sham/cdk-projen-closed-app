@@ -19,12 +19,14 @@ const awsCDKClosedAppProp: AwsCDKClosedAppProp = { ... }
 | --- | --- | --- |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.name">name</a></code> | <code>string</code> | This is the name of your project. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.commitGenerated">commitGenerated</a></code> | <code>boolean</code> | Whether to commit the managed files by default. |
+| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.gitIgnoreOptions">gitIgnoreOptions</a></code> | <code>projen.IgnoreFileOptions</code> | Configuration options for .gitignore file. |
+| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.gitOptions">gitOptions</a></code> | <code>projen.GitOptions</code> | Configuration options for git. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
-| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcOptions</code> | Options for .projenrc.json. |
+| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.renovatebot">renovatebot</a></code> | <code>boolean</code> | Use renovatebot to handle dependency upgrades. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.renovatebotOptions">renovatebotOptions</a></code> | <code>projen.RenovatebotOptions</code> | Options for renovatebot. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.autoApproveOptions">autoApproveOptions</a></code> | <code>projen.github.AutoApproveOptions</code> | Enable and configure the 'auto approve' workflow. |
@@ -47,7 +49,7 @@ const awsCDKClosedAppProp: AwsCDKClosedAppProp = { ... }
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.allowLibraryDependencies">allowLibraryDependencies</a></code> | <code>boolean</code> | Allow the project to include `peerDependencies` and `bundledDependencies`. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.authorEmail">authorEmail</a></code> | <code>string</code> | Author's e-mail. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.authorName">authorName</a></code> | <code>string</code> | Author's name. |
-| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Author's Organization. |
+| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Is the author an organization. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.authorUrl">authorUrl</a></code> | <code>string</code> | Author's URL / Website. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.autoDetectBin">autoDetectBin</a></code> | <code>boolean</code> | Automatically add all executables under the `bin` directory to your `package.json` file under the `bin` section. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | Binary programs vended with your module. |
@@ -73,6 +75,7 @@ const awsCDKClosedAppProp: AwsCDKClosedAppProp = { ... }
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.packageName">packageName</a></code> | <code>string</code> | The "name" in package.json. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.peerDependencyOptions">peerDependencyOptions</a></code> | <code>projen.javascript.PeerDependencyOptions</code> | Options for `peerDeps`. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | Peer dependencies for this module. |
+| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.pnpmVersion">pnpmVersion</a></code> | <code>string</code> | The version of PNPM to use if using PNPM as a package manager. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.repository">repository</a></code> | <code>string</code> | The repository is the location where the actual code for your package lives. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.repositoryDirectory">repositoryDirectory</a></code> | <code>string</code> | If the package.json for your package is not in the root directory (for example if it is part of a monorepo), you can specify the directory in which it lives. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.scopedPackagesOptions">scopedPackagesOptions</a></code> | <code>projen.javascript.ScopedPackagesOptions[]</code> | Options for privately hosted scoped packages. |
@@ -104,7 +107,7 @@ const awsCDKClosedAppProp: AwsCDKClosedAppProp = { ... }
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.buildWorkflow">buildWorkflow</a></code> | <code>boolean</code> | Define a GitHub workflow for building PRs. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.buildWorkflowTriggers">buildWorkflowTriggers</a></code> | <code>projen.github.workflows.Triggers</code> | Build workflow triggers. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.bundlerOptions">bundlerOptions</a></code> | <code>projen.javascript.BundlerOptions</code> | Options for `Bundler`. |
-| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret. |
+| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.codeCov">codeCov</a></code> | <code>boolean</code> | Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.codeCovTokenSecret">codeCovTokenSecret</a></code> | <code>string</code> | Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.copyrightOwner">copyrightOwner</a></code> | <code>string</code> | License copyright owner. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.copyrightPeriod">copyrightPeriod</a></code> | <code>string</code> | The copyright years to put in the LICENSE file. |
@@ -118,6 +121,7 @@ const awsCDKClosedAppProp: AwsCDKClosedAppProp = { ... }
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.mutableBuild">mutableBuild</a></code> | <code>boolean</code> | Automatically update files modified during builds to pull-request branches. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.npmignore">npmignore</a></code> | <code>string[]</code> | Additional entries to .npmignore. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.npmignoreEnabled">npmignoreEnabled</a></code> | <code>boolean</code> | Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. |
+| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.npmIgnoreOptions">npmIgnoreOptions</a></code> | <code>projen.IgnoreFileOptions</code> | Configuration options for .npmignore file. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.package">package</a></code> | <code>boolean</code> | Defines a `package` task that will produce an npm tarball under the artifacts directory (e.g. `dist`). |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.prettier">prettier</a></code> | <code>boolean</code> | Setup prettier. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.prettierOptions">prettierOptions</a></code> | <code>projen.javascript.PrettierOptions</code> | Prettier options. |
@@ -134,6 +138,7 @@ const awsCDKClosedAppProp: AwsCDKClosedAppProp = { ... }
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.workflowGitIdentity">workflowGitIdentity</a></code> | <code>projen.github.GitIdentity</code> | The git identity to use in workflows. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.workflowNodeVersion">workflowNodeVersion</a></code> | <code>string</code> | The node version to use in GitHub workflows. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.disableTsconfig">disableTsconfig</a></code> | <code>boolean</code> | Do not generate a `tsconfig.json` file (used by jsii projects since tsconfig.json is generated by the jsii compiler). |
+| <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.disableTsconfigDev">disableTsconfigDev</a></code> | <code>boolean</code> | Do not generate a `tsconfig.dev.json` file. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.docgen">docgen</a></code> | <code>boolean</code> | Docgen by Typedoc. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.docsDirectory">docsDirectory</a></code> | <code>string</code> | Docs directory. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedAppProp.property.entrypointTypes">entrypointTypes</a></code> | <code>string</code> | The .d.ts file that includes the type declarations for this module. |
@@ -197,6 +202,30 @@ public readonly commitGenerated: boolean;
 - *Default:* true
 
 Whether to commit the managed files by default.
+
+---
+
+##### `gitIgnoreOptions`<sup>Optional</sup> <a name="gitIgnoreOptions" id="cdk-projen-closed-app.AwsCDKClosedAppProp.property.gitIgnoreOptions"></a>
+
+```typescript
+public readonly gitIgnoreOptions: IgnoreFileOptions;
+```
+
+- *Type:* projen.IgnoreFileOptions
+
+Configuration options for .gitignore file.
+
+---
+
+##### `gitOptions`<sup>Optional</sup> <a name="gitOptions" id="cdk-projen-closed-app.AwsCDKClosedAppProp.property.gitOptions"></a>
+
+```typescript
+public readonly gitOptions: GitOptions;
+```
+
+- *Type:* projen.GitOptions
+
+Configuration options for git.
 
 ---
 
@@ -275,10 +304,10 @@ Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .pr
 ##### `projenrcJsonOptions`<sup>Optional</sup> <a name="projenrcJsonOptions" id="cdk-projen-closed-app.AwsCDKClosedAppProp.property.projenrcJsonOptions"></a>
 
 ```typescript
-public readonly projenrcJsonOptions: ProjenrcOptions;
+public readonly projenrcJsonOptions: ProjenrcJsonOptions;
 ```
 
-- *Type:* projen.ProjenrcOptions
+- *Type:* projen.ProjenrcJsonOptions
 - *Default:* default options
 
 Options for .projenrc.json.
@@ -363,7 +392,7 @@ public readonly clobber: boolean;
 ```
 
 - *Type:* boolean
-- *Default:* true
+- *Default:* true, but false for subprojects
 
 Add a `clobber` task which resets the repo to origin.
 
@@ -612,7 +641,7 @@ public readonly authorOrganization: boolean;
 
 - *Type:* boolean
 
-Author's Organization.
+Is the author an organization.
 
 ---
 
@@ -1008,6 +1037,19 @@ test your module against the lowest peer version required.
 
 ---
 
+##### `pnpmVersion`<sup>Optional</sup> <a name="pnpmVersion" id="cdk-projen-closed-app.AwsCDKClosedAppProp.property.pnpmVersion"></a>
+
+```typescript
+public readonly pnpmVersion: string;
+```
+
+- *Type:* string
+- *Default:* "7"
+
+The version of PNPM to use if using PNPM as a package manager.
+
+---
+
 ##### `repository`<sup>Optional</sup> <a name="repository" id="cdk-projen-closed-app.AwsCDKClosedAppProp.property.repository"></a>
 
 ```typescript
@@ -1047,7 +1089,9 @@ Options for privately hosted scoped packages.
 
 ---
 
-##### `scripts`<sup>Optional</sup> <a name="scripts" id="cdk-projen-closed-app.AwsCDKClosedAppProp.property.scripts"></a>
+##### ~~`scripts`~~<sup>Optional</sup> <a name="scripts" id="cdk-projen-closed-app.AwsCDKClosedAppProp.property.scripts"></a>
+
+- *Deprecated:* use `project.addTask()` or `package.setScript()`
 
 ```typescript
 public readonly scripts: {[ key: string ]: string};
@@ -1060,6 +1104,7 @@ npm scripts to include.
 
 If a script has the same name as a standard script,
 the standard script will be overwritten.
+Also adds the script as a task.
 
 ---
 
@@ -1278,7 +1323,7 @@ public readonly releaseTagPrefix: string;
 ```
 
 - *Type:* string
-- *Default:* no prefix
+- *Default:* "v"
 
 Automatically add the given prefix to release tags. Useful if you are releasing on multiple branches with overlapping version numbers.
 
@@ -1456,7 +1501,7 @@ public readonly codeCov: boolean;
 - *Type:* boolean
 - *Default:* false
 
-Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret.
+Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v3 A secret is required for private repos. Configured with @codeCovTokenSecret.
 
 ---
 
@@ -1636,6 +1681,18 @@ public readonly npmignoreEnabled: boolean;
 - *Default:* true
 
 Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs.
+
+---
+
+##### `npmIgnoreOptions`<sup>Optional</sup> <a name="npmIgnoreOptions" id="cdk-projen-closed-app.AwsCDKClosedAppProp.property.npmIgnoreOptions"></a>
+
+```typescript
+public readonly npmIgnoreOptions: IgnoreFileOptions;
+```
+
+- *Type:* projen.IgnoreFileOptions
+
+Configuration options for .npmignore file.
 
 ---
 
@@ -1846,6 +1903,19 @@ public readonly disableTsconfig: boolean;
 - *Default:* false
 
 Do not generate a `tsconfig.json` file (used by jsii projects since tsconfig.json is generated by the jsii compiler).
+
+---
+
+##### `disableTsconfigDev`<sup>Optional</sup> <a name="disableTsconfigDev" id="cdk-projen-closed-app.AwsCDKClosedAppProp.property.disableTsconfigDev"></a>
+
+```typescript
+public readonly disableTsconfigDev: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Do not generate a `tsconfig.dev.json` file.
 
 ---
 
@@ -2409,6 +2479,7 @@ new AwsCDKClosedApp(options: AwsCDKClosedAppProp)
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.addFields">addFields</a></code> | Directly set fields in `package.json`. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.addKeywords">addKeywords</a></code> | Adds keywords to package.json (deduplicated). |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.addPeerDeps">addPeerDeps</a></code> | Defines peer dependencies. |
+| <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.addScripts">addScripts</a></code> | Replaces the contents of multiple npm package.json scripts. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.addTestCommand">addTestCommand</a></code> | DEPRECATED. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.hasScript">hasScript</a></code> | Indicates if a script by the name name is defined. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.removeScript">removeScript</a></code> | Removes the npm script (always successful). |
@@ -2826,6 +2897,22 @@ add/upgrade`. If you wish to specify a version range use this syntax:
 
 ---
 
+##### `addScripts` <a name="addScripts" id="cdk-projen-closed-app.AwsCDKClosedApp.addScripts"></a>
+
+```typescript
+public addScripts(scripts: {[ key: string ]: string}): void
+```
+
+Replaces the contents of multiple npm package.json scripts.
+
+###### `scripts`<sup>Required</sup> <a name="scripts" id="cdk-projen-closed-app.AwsCDKClosedApp.addScripts.parameter.scripts"></a>
+
+- *Type:* {[ key: string ]: string}
+
+The scripts to set.
+
+---
+
 ##### ~~`addTestCommand`~~ <a name="addTestCommand" id="cdk-projen-closed-app.AwsCDKClosedApp.addTestCommand"></a>
 
 ```typescript
@@ -2840,7 +2927,7 @@ DEPRECATED.
 
 ---
 
-##### `hasScript` <a name="hasScript" id="cdk-projen-closed-app.AwsCDKClosedApp.hasScript"></a>
+##### ~~`hasScript`~~ <a name="hasScript" id="cdk-projen-closed-app.AwsCDKClosedApp.hasScript"></a>
 
 ```typescript
 public hasScript(name: string): boolean
@@ -2975,7 +3062,7 @@ The list of modules to depend on.
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.property.buildWorkflow">buildWorkflow</a></code> | <code>projen.build.BuildWorkflow</code> | The PR build GitHub workflow. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.property.buildWorkflowJobId">buildWorkflowJobId</a></code> | <code>string</code> | The job ID of the build workflow. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.property.jest">jest</a></code> | <code>projen.javascript.Jest</code> | The Jest configuration (if enabled). |
-| <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Maximum node version required by this pacakge. |
+| <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.property.maxNodeVersion">maxNodeVersion</a></code> | <code>string</code> | Maximum node version required by this package. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.property.minNodeVersion">minNodeVersion</a></code> | <code>string</code> | Minimum node.js version required by this package. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.property.npmignore">npmignore</a></code> | <code>projen.IgnoreFile</code> | The .npmignore file. |
 | <code><a href="#cdk-projen-closed-app.AwsCDKClosedApp.property.prettier">prettier</a></code> | <code>projen.javascript.Prettier</code> | *No description.* |
@@ -3521,7 +3608,7 @@ public readonly maxNodeVersion: string;
 
 - *Type:* string
 
-Maximum node version required by this pacakge.
+Maximum node version required by this package.
 
 ---
 
