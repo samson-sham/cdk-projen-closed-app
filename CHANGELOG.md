@@ -1,4 +1,11 @@
 
+### [0.0.11](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.10...v0.0.11) (2023-05-02)
+
+
+### Bug Fixes
+
+* remove npmrc ([b0fc734](https://github.com/samson-sham/cdk-projen-closed-app/commit/b0fc734f7f2f9f9e06b002776952fd3340ec652d))
+
 ### [0.0.10](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.9...v0.0.10) (2023-05-02)
 
 
