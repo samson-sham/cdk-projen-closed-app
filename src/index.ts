@@ -28,8 +28,8 @@ export class AwsCDKClosedApp extends AwsCdkTypeScriptApp {
         });
 
         // Allow mismatch peer dependencies, which usually causes necessary errors that breaks build
-        const npmRC = new javascript.NpmConfig(this);
-        npmRC.addConfig('strict-peer-dependencies', 'false');
+        // const npmRC = new javascript.NpmConfig(this);
+        // npmRC.addConfig('strict-peer-dependencies', 'false');
 
         const loginTask = this.addTask('login', { exec: 'AWS_PROFILE=sso ./refreshCredentials.sh' });
         this.cdkTasks.deploy.reset();
