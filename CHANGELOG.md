@@ -1,4 +1,11 @@
 
+### [0.0.10](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.9...v0.0.10) (2023-05-02)
+
+
+### Bug Fixes
+
+* remove project npmrc which conflicts with projen creation ([698eae1](https://github.com/samson-sham/cdk-projen-closed-app/commit/698eae142361f84c2cca4ab04c501a85c40adb1f))
+
 ### [0.0.9](https://github.com/samson-sham/cdk-projen-closed-app/compare/v0.0.8...v0.0.9) (2023-04-13)
 
 
